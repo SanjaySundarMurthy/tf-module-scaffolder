@@ -5,9 +5,11 @@
 </p>
 
 <p align="center">
+  <a href="https://pypi.org/project/tf-module-scaffolder/"><img src="https://img.shields.io/pypi/v/tf-module-scaffolder.svg" alt="PyPI"></a>
   <a href="https://github.com/SanjaySundarMurthy/tf-module-scaffolder/actions"><img src="https://github.com/SanjaySundarMurthy/tf-module-scaffolder/workflows/CI/badge.svg" alt="CI"></a>
   <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/python-3.9%2B-blue.svg" alt="Python 3.9+"></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="MIT License"></a>
+  <a href="https://pypi.org/project/tf-module-scaffolder/"><img src="https://img.shields.io/pypi/dm/tf-module-scaffolder.svg" alt="Downloads"></a>
 </p>
 
 ---
@@ -37,11 +39,14 @@ Starting a new Terraform module involves creating 10-15+ files with boilerplate 
 ## Installation
 
 ```bash
-# Clone the repository
+pip install tf-module-scaffolder
+```
+
+Or install from source:
+
+```bash
 git clone https://github.com/SanjaySundarMurthy/tf-module-scaffolder.git
 cd tf-module-scaffolder
-
-# Install in development mode
 pip install -e ".[dev]"
 ```
 
