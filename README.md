@@ -1,4 +1,7 @@
-# tf-module-scaffolder
+﻿# tf-module-scaffolder
+
+[![CI](https://github.com/SanjaySundarMurthy/tf-module-scaffolder/actions/workflows/ci.yml/badge.svg)](https://github.com/SanjaySundarMurthy/tf-module-scaffolder/actions/workflows/ci.yml)
+[![Python](https://img.shields.io/pypi/pyversions/tf-module-scaffolder)](https://pypi.org/project/tf-module-scaffolder/)
 
 <p align="center">
   <strong>Generate production-ready Terraform modules in seconds</strong>
@@ -47,7 +50,7 @@ Or install from source:
 ```bash
 git clone https://github.com/SanjaySundarMurthy/tf-module-scaffolder.git
 cd tf-module-scaffolder
-pip install -e ".[dev]"
+pip install tf-module-scaffolder
 ```
 
 ## Quick Start
@@ -178,7 +181,7 @@ Options:
 
 ```bash
 # Install dev dependencies
-pip install -e ".[dev]"
+pip install tf-module-scaffolder
 
 # Run tests
 pytest -v
@@ -212,3 +215,50 @@ tf_module_scaffolder/
 ## License
 
 MIT License — see [LICENSE](LICENSE) for details.
+
+
+## 🐳 Docker
+
+Run without installing Python:
+
+```bash
+# Build the image
+docker build -t tf-module-scaffolder .
+
+# Run
+docker run --rm tf-module-scaffolder --help
+
+# Example with volume mount
+docker run --rm -v ${PWD}:/workspace tf-module-scaffolder [command] /workspace
+```
+
+Or pull from the container registry:
+
+```bash
+docker pull ghcr.io/SanjaySundarMurthy/tf-module-scaffolder:latest
+docker run --rm ghcr.io/SanjaySundarMurthy/tf-module-scaffolder:latest --help
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Here's how:
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Commit changes: `git commit -m 'Add amazing feature'`
+4. Push to branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
+
+Please ensure tests pass before submitting:
+
+```bash
+pip install tf-module-scaffolder
+pytest -v
+ruff check .
+```
+
+## 🔗 Links
+
+- **PyPI**: [https://pypi.org/project/tf-module-scaffolder/](https://pypi.org/project/tf-module-scaffolder/)
+- **GitHub**: [https://github.com/SanjaySundarMurthy/tf-module-scaffolder](https://github.com/SanjaySundarMurthy/tf-module-scaffolder)
+- **Issues**: [https://github.com/SanjaySundarMurthy/tf-module-scaffolder/issues](https://github.com/SanjaySundarMurthy/tf-module-scaffolder/issues)
